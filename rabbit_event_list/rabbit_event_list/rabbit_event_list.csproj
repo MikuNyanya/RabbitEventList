@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>RabbitEventList</AssemblyName>
+    <SignAssembly>False</SignAssembly>
+    <ApplicationIcon>reisenlogo.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="rabbitsettings.settings" />
+    <None Remove="reisenlogo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="rabbitsettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>rabbitsettings.Designer.cs</LastGenOutput>
+    </Resource>
+    <Resource Include="reisenlogo.ico" />
+  </ItemGroup>
+
+</Project>
